@@ -21,8 +21,6 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.CR_PAT }}
       - name: Build PHP 8.0 CLI
-        run: docker build php-8.0-cli \
-          --label "org.opencontainers.image.source=https://github.com/makadev/ci-images" \
-          --tag ghcr.io/makadev/ci-images/php-8.0-cli:latest
+        run: docker build php-8.0-cli --label "org.opencontainers.image.source=https://github.com/makadev/ci-images" --tag ghcr.io/makadev/ci-images/php-8.0-cli:latest
       - name: Push PHP 8.0 CLI to GitHub Container Registry
         run: docker push ghcr.io/makadev/ci-images/php-8.0-cli:latest

@@ -21,8 +21,6 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.CR_PAT }}
       - name: Build PHP 7.4 CLI
-        run: docker build php-7.4-cli \
-          --label "org.opencontainers.image.source=https://github.com/makadev/ci-images" \
-          --tag ghcr.io/makadev/ci-images/php-7.4-cli:latest
+        run: docker build php-7.4-cli  --label "org.opencontainers.image.source=https://github.com/makadev/ci-images" --tag ghcr.io/makadev/ci-images/php-7.4-cli:latest
       - name: Push PHP 7.4 CLI to GitHub Container Registry
         run: docker push ghcr.io/makadev/ci-images/php-7.4-cli:latest
