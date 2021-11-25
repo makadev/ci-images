@@ -1,4 +1,4 @@
-ARG PHP_CLI_IMAGE=php:8.0.3-cli-buster
+ARG PHP_CLI_IMAGE=php:8.0.13-cli-buster
 ARG COMPOSER_IMAGE=composer:2
 
 FROM ${COMPOSER_IMAGE} AS composer-stage
